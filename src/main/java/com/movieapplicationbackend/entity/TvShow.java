@@ -1,0 +1,56 @@
+package com.movieapplicationbackend.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TvShow")
+
+public class TvShow {
+
+    @Id
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "original_name")
+    private String original_name;
+
+    @Column(name = "popularity")
+    private double popularity;
+
+    public TvShow() {
+
+    }
+
+    public TvShow(int id, String original_name, double popularity) {
+        this.id = id;
+        this.original_name = original_name;
+        this.popularity = popularity;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setOriginal_name(String original_name) {
+        this.original_name = original_name;
+    }
+
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getOriginal_name() {
+        return original_name;
+    }
+
+    public double getPopularity() {
+        return popularity;
+    }
+}

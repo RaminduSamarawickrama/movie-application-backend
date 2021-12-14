@@ -32,6 +32,7 @@ public class Movie {
 
     public Movie(boolean adult, int id, String original_title, double popularity, boolean video){
         this.adult = adult;
+        this.id = id;
         this.original_title = original_title;
         this.popularity = popularity;
         this.video = video;
@@ -76,4 +77,9 @@ public class Movie {
     public void setVideo(boolean video) {
         this.video = video;
     }
+
+    public void printObject(){
+        System.out.println("--- "+isAdult() +" : "+ getId() + " : "+ getOriginal_title() + " : "+ getPopularity() + " : " + isVideo());
+    }
+
 }

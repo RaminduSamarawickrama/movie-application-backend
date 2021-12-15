@@ -49,4 +49,13 @@ public class MovieAndTvShowController {
     public TrendingShowsDTO getTopTenShows(){
         return showService.getTrendingMoviesAndTvShows();
     }
+
+    @GetMapping("/dailydumptv")
+    public void dailyDumpTv(){
+        tmdbDailyDumpService.tvShowDump();
+    }
+    @GetMapping("/dailydumpmovie")
+    public void dailyDumpMovie(){
+        tmdbDailyDumpService.movieDump();
+    }
 }

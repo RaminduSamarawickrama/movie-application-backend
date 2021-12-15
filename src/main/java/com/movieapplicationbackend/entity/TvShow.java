@@ -15,7 +15,7 @@ public class TvShow {
     private int id;
 
     @Column(name = "original_name")
-    private String original_name;
+    private String name;
 
     @Column(name = "popularity")
     private double popularity;
@@ -24,9 +24,9 @@ public class TvShow {
 
     }
 
-    public TvShow(int id, String original_name, double popularity) {
+    public TvShow(int id, String name, double popularity) {
         this.id = id;
-        this.original_name = original_name;
+        this.name = name;
         this.popularity = popularity;
     }
 
@@ -34,8 +34,8 @@ public class TvShow {
         this.id = id;
     }
 
-    public void setOriginal_name(String original_name) {
-        this.original_name = original_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setPopularity(double popularity) {
@@ -46,8 +46,8 @@ public class TvShow {
         return id;
     }
 
-    public String getOriginal_name() {
-        return original_name;
+    public String getName() {
+        return name;
     }
 
     public double getPopularity() {

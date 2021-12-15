@@ -17,7 +17,7 @@ public class Movie {
     private int id;
 
     @Column(name = "movie_title")
-    private String original_title;
+    private String title;
 
     @Column(name = "movie_popularity")
     private double popularity;
@@ -30,10 +30,10 @@ public class Movie {
 
     }
 
-    public Movie(boolean adult, int id, String original_title, double popularity, boolean video){
+    public Movie(boolean adult, int id, String title, double popularity, boolean video){
         this.adult = adult;
         this.id = id;
-        this.original_title = original_title;
+        this.title = title;
         this.popularity = popularity;
         this.video = video;
     }
@@ -46,8 +46,8 @@ public class Movie {
         return id;
     }
 
-    public String getOriginal_title() {
-        return original_title;
+    public String getTitle() {
+        return title;
     }
 
     public double getPopularity() {
@@ -66,8 +66,8 @@ public class Movie {
         this.id = id;
     }
 
-    public void setOriginal_title(String original_title) {
-        this.original_title = original_title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setPopularity(double popularity) {
@@ -79,7 +79,7 @@ public class Movie {
     }
 
     public void printObject(){
-        System.out.println("--- "+isAdult() +" : "+ getId() + " : "+ getOriginal_title() + " : "+ getPopularity() + " : " + isVideo());
+        System.out.println("--- "+isAdult() +" : "+ getId() + " : "+ getTitle() + " : "+ getPopularity() + " : " + isVideo());
     }
 
 }
